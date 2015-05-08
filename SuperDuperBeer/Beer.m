@@ -26,4 +26,25 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeObject:self.name forKey:@"name"];
+    [coder encodeInteger:self.countryID forKey:@"countryID"];
+    [coder encodeObject:self.imageName forKey:@"imageName"];
+    [coder encodeInteger:self.alcoholPercent forKey:@"alcoholPercent"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder;
+{
+    self = [super init];
+    if (self)
+    {
+        self.name = [coder decodeObjectForKey:@"name"];
+        self.countryID = [coder decodeIntegerForKey:@"countryID"];
+        self.imageName = [coder decodeObjectForKey:@"imageName"];
+        self.alcoholPercent = [coder decodeIntegerForKey:@"alcoholPercent"];
+    }
+    return self;
+}
+
 @end

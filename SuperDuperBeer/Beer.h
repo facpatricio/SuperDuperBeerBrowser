@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Beer : NSObject
-
+@interface Beer : NSObject <NSCoding>
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSUInteger countryID;
 @property (nonatomic) NSString *imageName;

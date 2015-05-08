@@ -14,26 +14,45 @@
 @property (weak, nonatomic) IBOutlet UIImageView *beerImage;
 @property (nonatomic, strong) NSMutableArray *beersArray;   //Of Beer
 @property (nonatomic) NSUInteger currentBeerIndex;
+@property (nonatomic) NSString *beersFile;
 @end
 
 @implementation ViewController
 
+-(NSString*)beersFile
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = paths[0];
+    _beersFile = [documentsDirectory stringByAppendingPathComponent:@"beers.plist"];
+    return _beersFile;
+}
+
 -(NSMutableArray*)beersArray
 {
-    
-    if(!_beersArray)
+    NSMutableArray *arrayFromFile = [NSKeyedUnarchiver unarchiveObjectWithFile:self.beersFile];
+    if(arrayFromFile)
+    {
+        _beersArray = arrayFromFile;
+    }
+    else if(!_beersArray)
     {
         _beersArray = [[NSMutableArray alloc]init];
-        NSArray *beersPList = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Beers" ofType:@"plist"]]; //Of NSDictionary
-        for(NSDictionary *dict in beersPList)
+
+        
+        if(_beersArray.count == 0)
         {
-            
-            [_beersArray addObject:[[Beer alloc] initWithName: dict[kKeyName]
-                                                withCountryID: [(NSNumber*)dict[kKeyCountryID] integerValue]
-                                                withImageName: dict[kKeyImageName]
-                                           withAlcoholPercent: [(NSNumber*)dict[kKeyAlcoholPercent] integerValue]]];
+            NSArray *beersPList = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Beers" ofType:@"plist"]]; //Of NSDictionary
+            for(NSDictionary *dict in beersPList)
+            {
+                
+                [_beersArray addObject:[[Beer alloc] initWithName: dict[kKeyName]
+                                                    withCountryID: [(NSNumber*)dict[kKeyCountryID] integerValue]
+                                                    withImageName: dict[kKeyImageName]
+                                               withAlcoholPercent: [(NSNumber*)dict[kKeyAlcoholPercent] integerValue]]];
+            }
         }
     }
+    
     return _beersArray;
 }
 
@@ -94,7 +113,9 @@
     if ([[segue identifier] isEqualToString:@"Details Segue"])
     {
         DetailsVC *detailsVC = [segue destinationViewController];
-        detailsVC.currentBeer = self.beersArray[self.currentBeerIndex];
+        detailsVC.currentBeerIndex = self.currentBeerIndex;
+        detailsVC.beersArray = self.beersArray;
+        detailsVC.beersFile = self.beersFile;
         [self saveSettings];
     }
 }

@@ -10,5 +10,7 @@
 #import "Beer.h"
 
 @interface DetailsVC : UIViewController
-@property (nonatomic, weak) Beer *currentBeer;
+@property (nonatomic, strong) NSMutableArray *beersArray;   //Of Beer
+@property (nonatomic) NSUInteger currentBeerIndex;
+@property (nonatomic) NSString *beersFile;
 @end
