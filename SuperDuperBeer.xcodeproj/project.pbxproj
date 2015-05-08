@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		9B7E989F1AFCA12C00175D9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E989E1AFCA12C00175D9E /* main.m */; };
 		9B7E98A21AFCA12C00175D9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98A11AFCA12C00175D9E /* AppDelegate.m */; };
-		9B7E98A51AFCA12C00175D9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98A41AFCA12C00175D9E /* ViewController.m */; };
 		9B7E98A81AFCA12C00175D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E98A61AFCA12C00175D9E /* Main.storyboard */; };
 		9B7E98AA1AFCA12C00175D9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E98A91AFCA12C00175D9E /* Images.xcassets */; };
 		9B7E98AD1AFCA12C00175D9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E98AB1AFCA12C00175D9E /* LaunchScreen.xib */; };
 		9B7E98B91AFCA12D00175D9E /* SuperDuperBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98B81AFCA12D00175D9E /* SuperDuperBeerTests.m */; };
+		9B7E98CD1AFCA9BB00175D9E /* Beers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E98CC1AFCA9BB00175D9E /* Beers.plist */; };
+		9B7E98D41AFCAA1400175D9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98D31AFCAA1400175D9E /* ViewController.m */; };
+		9B7E98D81AFCAA3500175D9E /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E98D71AFCAA3500175D9E /* Countries.plist */; };
+		9B7E98DB1AFCAD2900175D9E /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98DA1AFCAD2900175D9E /* Beer.m */; };
+		9B7E98DE1AFCAE2D00175D9E /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98DD1AFCAE2D00175D9E /* Country.m */; };
+		9B7E98E11AFCB99E00175D9E /* DetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E98E01AFCB99E00175D9E /* DetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +37,24 @@
 		9B7E989E1AFCA12C00175D9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B7E98A01AFCA12C00175D9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B7E98A11AFCA12C00175D9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9B7E98A31AFCA12C00175D9E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9B7E98A41AFCA12C00175D9E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9B7E98A71AFCA12C00175D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B7E98A91AFCA12C00175D9E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B7E98AC1AFCA12C00175D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9B7E98B21AFCA12D00175D9E /* SuperDuperBeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperDuperBeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7E98B71AFCA12D00175D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B7E98B81AFCA12D00175D9E /* SuperDuperBeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperDuperBeerTests.m; sourceTree = "<group>"; };
+		9B7E98CC1AFCA9BB00175D9E /* Beers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Beers.plist; sourceTree = "<group>"; };
+		9B7E98D21AFCAA1400175D9E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9B7E98D31AFCAA1400175D9E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9B7E98D71AFCAA3500175D9E /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
+		9B7E98D91AFCAD2900175D9E /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		9B7E98DA1AFCAD2900175D9E /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		9B7E98DC1AFCAE2D00175D9E /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		9B7E98DD1AFCAE2D00175D9E /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		9B7E98DF1AFCB99E00175D9E /* DetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsVC.h; sourceTree = "<group>"; };
+		9B7E98E01AFCB99E00175D9E /* DetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsVC.m; sourceTree = "<group>"; };
+		9B7E98E21AFCBC7F00175D9E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9B7E98E31AFCBD0E00175D9E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +96,17 @@
 		9B7E989B1AFCA12C00175D9E /* SuperDuperBeer */ = {
 			isa = PBXGroup;
 			children = (
+				9B7E98E31AFCBD0E00175D9E /* PrefixHeader.pch */,
+				9B7E98D61AFCAA2500175D9E /* Models */,
+				9B7E98D51AFCAA1E00175D9E /* ViewControllers */,
+				9B7E98CE1AFCA9BF00175D9E /* Resources */,
 				9B7E98A01AFCA12C00175D9E /* AppDelegate.h */,
 				9B7E98A11AFCA12C00175D9E /* AppDelegate.m */,
-				9B7E98A31AFCA12C00175D9E /* ViewController.h */,
-				9B7E98A41AFCA12C00175D9E /* ViewController.m */,
 				9B7E98A61AFCA12C00175D9E /* Main.storyboard */,
 				9B7E98A91AFCA12C00175D9E /* Images.xcassets */,
 				9B7E98AB1AFCA12C00175D9E /* LaunchScreen.xib */,
 				9B7E989C1AFCA12C00175D9E /* Supporting Files */,
+				9B7E98E21AFCBC7F00175D9E /* Constants.h */,
 			);
 			path = SuperDuperBeer;
 			sourceTree = "<group>";
@@ -117,6 +135,37 @@
 				9B7E98B71AFCA12D00175D9E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B7E98CE1AFCA9BF00175D9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E98CC1AFCA9BB00175D9E /* Beers.plist */,
+				9B7E98D71AFCAA3500175D9E /* Countries.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9B7E98D51AFCAA1E00175D9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E98D21AFCAA1400175D9E /* ViewController.h */,
+				9B7E98D31AFCAA1400175D9E /* ViewController.m */,
+				9B7E98DF1AFCB99E00175D9E /* DetailsVC.h */,
+				9B7E98E01AFCB99E00175D9E /* DetailsVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B7E98D61AFCAA2500175D9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E98D91AFCAD2900175D9E /* Beer.h */,
+				9B7E98DA1AFCAD2900175D9E /* Beer.m */,
+				9B7E98DC1AFCAE2D00175D9E /* Country.h */,
+				9B7E98DD1AFCAE2D00175D9E /* Country.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +250,8 @@
 			files = (
 				9B7E98A81AFCA12C00175D9E /* Main.storyboard in Resources */,
 				9B7E98AD1AFCA12C00175D9E /* LaunchScreen.xib in Resources */,
+				9B7E98CD1AFCA9BB00175D9E /* Beers.plist in Resources */,
+				9B7E98D81AFCAA3500175D9E /* Countries.plist in Resources */,
 				9B7E98AA1AFCA12C00175D9E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7E98A51AFCA12C00175D9E /* ViewController.m in Sources */,
+				9B7E98D41AFCAA1400175D9E /* ViewController.m in Sources */,
 				9B7E98A21AFCA12C00175D9E /* AppDelegate.m in Sources */,
 				9B7E989F1AFCA12C00175D9E /* main.m in Sources */,
+				9B7E98E11AFCB99E00175D9E /* DetailsVC.m in Sources */,
+				9B7E98DB1AFCAD2900175D9E /* Beer.m in Sources */,
+				9B7E98DE1AFCAE2D00175D9E /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SuperDuperBeer/PrefixHeader.pch;
 				INFOPLIST_FILE = SuperDuperBeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SuperDuperBeer/PrefixHeader.pch;
 				INFOPLIST_FILE = SuperDuperBeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

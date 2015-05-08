@@ -7,21 +7,97 @@
 //
 
 #import "ViewController.h"
+#import "Beer.h"
+#import "DetailsVC.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *beerImage;
+@property (nonatomic, strong) NSMutableArray *beersArray;   //Of Beer
+@property (nonatomic) NSUInteger currentBeerIndex;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+-(NSMutableArray*)beersArray
+{
+    
+    if(!_beersArray)
+    {
+        _beersArray = [[NSMutableArray alloc]init];
+        NSArray *beersPList = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Beers" ofType:@"plist"]]; //Of NSDictionary
+        for(NSDictionary *dict in beersPList)
+        {
+            
+            [_beersArray addObject:[[Beer alloc] initWithName: dict[kKeyName]
+                                                withCountryID: [(NSNumber*)dict[kKeyCountryID] integerValue]
+                                                withImageName: dict[kKeyImageName]
+                                           withAlcoholPercent: [(NSNumber*)dict[kKeyAlcoholPercent] integerValue]]];
+        }
+    }
+    return _beersArray;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showBeer
+{
+    // Do any additional setup after loading the view, typically from a nib.
+    Beer *currentBeer = self.beersArray[self.currentBeerIndex];
+    self.beerImage.image = [UIImage imageNamed:currentBeer.imageName];
+    self.navigationController.navigationBar.topItem.title = currentBeer.name;
+
 }
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.currentBeerIndex = [(NSNumber*)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentBeerIndex"] longValue];
+    
+    [self showBeer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(saveSettings)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
+    
+}
+
+- (void)saveSettings
+{
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithLong:self.currentBeerIndex] forKey:@"currentBeerIndex"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)previousButtonPressed:(id)sender
+{
+    if(self.currentBeerIndex == 0)
+        self.currentBeerIndex = self.beersArray.count - 1;
+    else
+        self.currentBeerIndex--;
+    
+    [self showBeer];
+}
+
+- (IBAction)nextButtonPressed:(id)sender
+{
+    if(self.currentBeerIndex == self.beersArray.count - 1)
+        self.currentBeerIndex = 0;
+    else
+        self.currentBeerIndex++;
+    
+    [self showBeer];
+}
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Details Segue"])
+    {
+        DetailsVC *detailsVC = [segue destinationViewController];
+        detailsVC.currentBeer = self.beersArray[self.currentBeerIndex];
+        [self saveSettings];
+    }
+}
+
 
 @end

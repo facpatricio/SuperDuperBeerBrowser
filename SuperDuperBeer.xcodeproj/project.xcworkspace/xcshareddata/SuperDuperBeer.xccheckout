@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7DD1EF86-CEC3-4302-ABD0-4F80EDC6232F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FC10B2CC86C82E9B0D7A39EDB6E62A617D9BCED5</key>
+		<string>https://github.com/facpatricio/SuperDuperBeerBrowser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SuperDuperBeer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FC10B2CC86C82E9B0D7A39EDB6E62A617D9BCED5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/facpatricio/SuperDuperBeerBrowser.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC10B2CC86C82E9B0D7A39EDB6E62A617D9BCED5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC10B2CC86C82E9B0D7A39EDB6E62A617D9BCED5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SuperDuperBeer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
