@@ -1,6 +1,6 @@
 //
-//  SuperDuperBeerTests.m
-//  SuperDuperBeerTests
+//  SuperDuperBeerBrowserTests.m
+//  SuperDuperBeerBrowserTests
 //
 //  Created by Filipe Patrício on 08/05/15.
 //  Copyright (c) 2015 Filipe Patrício. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface SuperDuperBeerTests : XCTestCase
+@interface SuperDuperBeerBrowserTests : XCTestCase
 
 @end
 
-@implementation SuperDuperBeerTests
+@implementation SuperDuperBeerBrowserTests
 
 - (void)setUp {
     [super setUp];
